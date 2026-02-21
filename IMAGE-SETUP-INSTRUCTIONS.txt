@@ -1,0 +1,123 @@
+AVILIAN BABY SHOP - IMAGE SETUP INSTRUCTIONS
+============================================
+
+📁 FOLDER STRUCTURE
+-------------------
+Create this folder structure where your HTML file is:
+
+your-website/
+├── AVILIAN.html
+├── Avilian.css
+├── Avilian.js
+└── images/
+    ├── logo.png (or logo.jpg)
+    └── gallery/
+        ├── image1.jpg
+        ├── image2.jpg
+        ├── image3.jpg
+        ├── image4.jpg
+        ├── image5.jpg
+        ├── image6.jpg
+        ├── image7.jpg
+        ├── image8.jpg
+        └── image9.jpg
+
+
+🖼️ HOW TO ADD YOUR IMAGES
+--------------------------
+
+STEP 1: Create the folders
+---------------------------
+1. In the same folder as your HTML file, create a folder called "images"
+2. Inside "images", create a folder called "gallery"
+
+
+STEP 2: Add your logo
+----------------------
+1. Put your logo file in the "images" folder
+2. Rename it to "logo.png" (or keep the name and update the CSS)
+3. If your logo has a different name, update line 145 & 156 in Avilian.css:
+   
+   Change: background-image: url('images/logo.png');
+   To: background-image: url('images/YOUR-LOGO-NAME.png');
+
+
+STEP 3: Add your gallery images
+--------------------------------
+1. Put your 9 product images in the "images/gallery" folder
+2. Rename them: image1.jpg, image2.jpg, image3.jpg, ... image9.jpg
+   
+   OR
+   
+   Keep your original filenames and update the HTML (lines 139-173):
+   
+   Change: <img src="images/gallery/image1.jpg" alt="Baby product 1">
+   To: <img src="images/gallery/YOUR-IMAGE-NAME.jpg" alt="Baby product 1">
+
+
+📝 TIPS FOR BEST RESULTS
+-------------------------
+✓ Use JPG format for photos (smaller file size)
+✓ Use PNG format for logo (better quality with transparency)
+✓ Optimize images before uploading (compress them to load faster)
+✓ Recommended image sizes:
+  - Logo: 500x500 pixels or similar square
+  - Gallery images: 800x800 pixels (will be cropped to square)
+
+
+🔧 WHAT I FIXED
+---------------
+✅ Gallery now displays real images (not placeholders)
+✅ Logo appears as faded background behind hero text
+✅ Fixed floating action button (FAB) - now works properly
+✅ Fixed all broken links (TikTok, Instagram, WhatsApp)
+✅ Fixed HTML structure (closed all tags properly)
+✅ Fixed email link in footer
+✅ Made gallery responsive for mobile
+✅ Added smooth scrolling
+✅ Improved hover effects on gallery items
+
+
+🎨 CUSTOMIZATION OPTIONS
+-------------------------
+If you want to adjust the logo:
+
+1. Make it MORE visible in background:
+   - In Avilian.css line 156, change: opacity: 0.08;
+   - To a higher number like: opacity: 0.15;
+
+2. Make it BIGGER/SMALLER:
+   - In Avilian.css line 145, change: background-size: 400px;
+   - To your preferred size
+
+3. Use ONLY the faded watermark style:
+   - In Avilian.css line 145, remove or comment out the background-image
+   - Keep only the ::before section (lines 149-159)
+
+
+📱 RESPONSIVE DESIGN
+--------------------
+✓ Works on phones, tablets, and desktops
+✓ Gallery adjusts automatically
+✓ Mobile menu works perfectly
+✓ FAB button sized appropriately for touch
+
+
+❓ NEED HELP?
+-------------
+If images don't show:
+1. Check folder names match exactly (case-sensitive)
+2. Check file extensions (.jpg vs .png)
+3. Make sure files are in correct folders
+4. Clear browser cache and refresh
+
+
+🚀 YOU'RE READY!
+----------------
+Upload these files to your web hosting:
+- AVILIAN.html
+- Avilian.css
+- Avilian.js
+- images/ folder (with all contents)
+
+Then visit your website and it should work perfectly!
