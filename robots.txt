@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://avilian847.github.io/project-babyshop/sitemap.xml
