@@ -98,4 +98,45 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    
+    // 6. Carousel Slider
+    const carouselState = {};
+
+    function initCarousels() {
+        document.querySelectorAll('.carousel').forEach(carousel => {
+            const id = carousel.id;
+            const imgs = carousel.querySelectorAll('.carousel-track img');
+            const dotsContainer = carousel.querySelector('.carousel-dots');
+            carouselState[id] = { current: 0, total: imgs.length };
+
+            imgs.forEach((_, i) => {
+                const dot = document.createElement('button');
+                dot.className = 'dot-btn' + (i === 0 ? ' active' : '');
+                dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+                dot.onclick = () => goToSlide(id, i);
+                dotsContainer.appendChild(dot);
+            });
+
+            setInterval(() => slideCarousel(id, 1), 3500 + Math.random() * 1000);
+        });
+    }
+
+    function goToSlide(id, index) {
+        const carousel = document.getElementById(id);
+        const state = carouselState[id];
+        state.current = (index + state.total) % state.total;
+        carousel.querySelector('.carousel-track').style.transform = `translateX(-${state.current * 100}%)`;
+        carousel.querySelectorAll('.dot-btn').forEach((d, i) => d.classList.toggle('active', i === state.current));
+    }
+
+    function slideCarousel(id, dir) {
+        goToSlide(id, carouselState[id].current + dir);
+    }
+
+    window.slideCarousel = slideCarousel;
+
+    initCarousels();
+
 });
+
+
